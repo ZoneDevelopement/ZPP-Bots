@@ -23,4 +23,4 @@ jobs:
       - name: Create release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" build/libs/*.jar --generate-notes
+        run: gh release create "$GITHUB_REF_NAME" build/libs/ZPP-Bots-*.jar --generate-notes

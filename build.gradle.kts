@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "dev.nandi0813"
-version = "1.0.14"
+version = "1.1.0"
 
 java { toolchain.languageVersion = JavaLanguageVersion.of(25) }
 
