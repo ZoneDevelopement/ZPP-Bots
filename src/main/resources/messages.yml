@@ -1,0 +1,126 @@
+VERSION: 6
+PREFIX: '<dark_gray>[<gold>Bots<dark_gray>] '
+PLAYER-ONLY: '<red>Only players can use this command.'
+BOT-BODY:
+  NO-PERMISSION: "<red>You don't have permission."
+  HELP: '<yellow>/botbody spawn <gray>| <yellow>/botbody remove <gray>| <yellow>/botbody status <gray>| <yellow>/botbody run \<scenario> <gray>| <yellow>/botbody stop'
+  UNAVAILABLE: '<red>The native body diagnostic is unavailable on this server or still starting. Check the console.'
+  STATUS: '<yellow>Native body diagnostics: <white><count> <gray>active; backend: <backend>'
+  ALREADY-ACTIVE: '<red>You already have a diagnostic body. Remove it first.'
+  NOT-ACTIVE: "<yellow>You don't have an active diagnostic body."
+  BUSY: '<red>Four diagnostic bodies are active. Try again shortly.'
+  UNSAFE-AREA: '<red>Use a loaded, clear area with solid ground in a world allowed in config.yml.'
+  STARTED: '<green>Paused diagnostic body spawned for you only. It expires in 60 seconds.'
+  REMOVED: '<green>Diagnostic body removed.'
+  FAILED: '<red>The diagnostic body could not be created. Check the console.'
+  INVALID-SCENARIO: '<red>Unknown movement scenario. Use tab completion.'
+  SCRIPT-BUSY: '<red>A movement script is already running. Use /botbody stop first.'
+  RECORDING-BUSY: '<red>The recorder is busy. Try again shortly.'
+  SCRIPT-STARTED: '<green>Running diagnostic movement: <yellow><scenario><green>. Recording 160 samples.'
+  KNOCKBACK-FIXTURE: '<yellow>This script does not apply a hit. Knockback requires the controlled melee test fixture; this diagnostic body blocks damage.'
+  SCRIPT-STOPPED: '<green>Movement script stopped. The body is paused.'
+  NO-SCRIPT: '<yellow>No movement script is running.'
+  MOTION-FAILED: '<red>The movement diagnostic ended and its body was removed. Check the console.'
+BOT-PROBE:
+  NO-PERMISSION: "<red>You don't have permission."
+  UNAVAILABLE: '<red>The mechanics recorder is unavailable.'
+  HELP: '<yellow>/botprobe start [label] [ticks] <gray>| <yellow>/botprobe stop <gray>| <yellow>/botprobe status'
+  INVALID-LABEL: '<red>Use 1-32 letters, numbers, underscores or hyphens for the label.'
+  INVALID-TICKS: '<red>Recording length must be an integer from 20 to 600 ticks.'
+  ALREADY-RECORDING: '<red>You already have a recording. Use /botprobe stop first.'
+  NOT-RECORDING: "<yellow>You don't have an active recording."
+  BUSY: '<red>Four recordings are active or waiting to save. Try again shortly.'
+  STARTED: '<green>Recording <yellow><label> <green>for <yellow><ticks> <green>samples. Perform your test now.'
+  STATUS: '<yellow><label><gray>: <white><samples>/<ticks> <gray>samples, <white><events> <gray>events.'
+  QUEUED: '<green>Recording ended <gray>(<reason>)<green>: <yellow><samples> <green>samples. Queued <yellow><file> <green>for saving; check the console for the save result.'
+  FAILED: '<red>The recording could not be prepared or queued. Check the console.'
+BOT-PRACTICE:
+  NO-PERMISSION: "<red>You don't have permission."
+  UNAVAILABLE: '<red>Bot practice is unavailable right now. Try again later.'
+  NO-REMATCH: '<red>You have no recent bot match to play again.'
+  HELP: '<yellow>/botpractice <gray>| <yellow>/botpractice rematch'
+SETUP-MENU:
+  TITLE: '<dark_gray>Set up your bot match'
+  ITEM-NAME: '<gold><name>'
+  DEFAULT: '<green>Default'
+  FOOTER:
+    - ''
+    - '<yellow>Click to select'
+  SELECTED: '<green>Selected'
+  START:
+    NAME: '<green><bold>Choose kit'
+    LORE:
+      - '<gray>Next: pick a kit, arena and rounds.'
+  SUMMARY:
+    NAME: '<gold><bold>Your bot match'
+    LORE:
+      - '<gray>Difficulty: <difficulty>'
+      - '<gray>Play style: <white><style>'
+      - ''
+      - '<gray>Pick below, then press <green>Choose kit</green>.'
+  LEVEL-COLOR:
+    '1': '<green>'
+    '2': '<yellow>'
+    '3': '<gold>'
+    '4': '<red>'
+    '5': '<dark_red>'
+  REMATCH:
+    NAME: '<aqua><bold>Play again'
+    LORE:
+      - '<gray>Start your last setup again.'
+      - '<gray>Kit: <white><ladder>'
+PLAY-STYLE:
+  DEFAULT:
+    NAME: 'Default'
+    LORE:
+      - '<gray>The standard way the bot fights.'
+  SAFE:
+    NAME: 'Safe'
+    LORE:
+      - '<gray>Retreats early to heal and'
+      - '<gray>avoids risky plays.'
+  AGGRESSIVE:
+    NAME: 'Aggressive'
+    LORE:
+      - '<gray>Pushes the fight and rarely retreats.'
+  ADAPTIVE:
+    NAME: 'Adaptive'
+    LORE:
+      - '<gray>Switches between safe and aggressive'
+      - '<gray>depending on how the fight goes.'
+  DEFENSIVE:
+    NAME: 'Defensive'
+    LORE:
+      - '<gray>Plays it cool and retreats when hurt.'
+  BALANCED:
+    NAME: 'Balanced'
+    LORE:
+      - '<gray>A mix of pressure and caution.'
+  RANDOM:
+    NAME: 'Random'
+    LORE:
+      - '<gray>Each bot rolls its own style.'
+DIFFICULTY:
+  '1':
+    NAME: 'Beginner'
+    LORE:
+      - '<gray>Slow reactions, loose aim and many mistakes.'
+      - '<gray>Good for learning the basics.'
+  '2':
+    NAME: 'Easy'
+    LORE:
+      - '<gray>Reacts late and rarely resets its sprint.'
+  '3':
+    NAME: 'Normal'
+    LORE:
+      - '<gray>A steady opponent with sprint resets'
+      - '<gray>and some critical hits.'
+  '4':
+    NAME: 'Hard'
+    LORE:
+      - '<gray>Quick reactions, tight strafing'
+      - '<gray>and frequent critical hits.'
+  '5':
+    NAME: 'Expert'
+    LORE:
+      - '<gray>Fast, precise and rarely makes a mistake.'

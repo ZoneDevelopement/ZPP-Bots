@@ -1,0 +1,38 @@
+VERSION: 10
+
+# Server limits for bot practice. Lower them on small servers.
+LIMITS:
+  MAX-ACTIVE-MATCHES: 16 # Bot matches running at the same time (1-64).
+  MAX-TOTAL-BOTS: 32 # Bots alive on the whole server at once (1-256).
+  MAX-BOTS-PER-MATCH: 7 # Bots in one match: team size x2 minus the players. 1 allows only 1v1 (1-7).
+  START-TIMEOUT-TICKS: 200 # How long a match may take to start (20-1200).
+  MAX-MATCH-DURATION-SECONDS: 600 # Longest match before it ends as a timeout (30-3600).
+
+# Bot player names: <PREFIX><number>, e.g. bot_1, bot_2. Letters, digits and _ only, at most 12 characters.
+# Restart to apply.
+NAMES:
+  PREFIX: "bot_"
+
+# Bots wear their opponent's skin in 1v1 matches. false keeps the default skin.
+SKINS:
+  COPY-OPPONENT: false
+
+# Worlds where staff may spawn /botbody diagnostic bodies, by world name.
+# Players must be in the lobby state. Never list arena worlds.
+DIAGNOSTICS:
+  WORLDS: []
+
+# Level used when a bot match does not choose one (1-5).
+DEFAULT-DIFFICULTY: 3
+
+# Logs bot decisions to the console. Very noisy.
+DEBUG: false
+
+# Signed tuning supplies combat behavior and difficulty values in memory; those values are never saved here.
+# Known boolean technique keys may be set locally to override signed technique switches.
+BEHAVIOR:
+  # The style the setup menu starts on, and the style used when a match does not choose one.
+  PLAY-STYLE: DEFAULT
+  # Styles players can pick in the setup menu, in menu order. PLAY-STYLE must be one of them.
+  PLAYER-PLAY-STYLES: [DEFAULT, SAFE, AGGRESSIVE, ADAPTIVE, DEFENSIVE, BALANCED, RANDOM]
+  TECHNIQUES: {}

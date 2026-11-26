@@ -1,0 +1,5 @@
+name: BotBodySmoke
+version: '1.0'
+main: dev.nandi0813.zppbots.smoke.BotBodySmoke
+api-version: '1.21.11'
+depend: [ZonePracticePro, ZPPBots]

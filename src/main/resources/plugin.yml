@@ -1,0 +1,27 @@
+name: ZPPBots
+version: '${version}'
+main: dev.nandi0813.zppbots.ZPPBots
+authors: [ Nandi0813 ]
+description: PvP bots addon for ZonePractice Pro
+depend: [ ZonePracticePro ]
+api-version: '1.21'
+libraries:
+  - org.json:json:20260814
+commands:
+  botprobe:
+    description: Record your own player mechanics for bot parity checks
+  botbody:
+    description: Spawn and inspect a protected paused bot body
+  botpractice:
+    description: Practice against a PvP bot
+    aliases: [ bots ]
+permissions:
+  zppbots.probe:
+    description: Record your own player mechanics for bot parity checks
+    default: op
+  zppbots.body:
+    description: Spawn and inspect diagnostic bot bodies
+    default: op
+  zppbots.use:
+    description: Open bot practice and start bot rematches
+    default: true
